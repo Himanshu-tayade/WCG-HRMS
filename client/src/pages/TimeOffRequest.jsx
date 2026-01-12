@@ -15,7 +15,7 @@ const TimeOffRequest = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await fetch("https://hrms-1-2jfq.onrender.com/api/project", {
+        const res = await fetch("https://wcg-hrms.onrender.com/api/project", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -78,7 +78,7 @@ const TimeOffRequest = () => {
 
         if (leaveDays.length > 0) {
           const res = await fetch(
-            `https://hrms-1-2jfq.onrender.com/api/timesheet/${weekString}?projectId=${projectId}`,
+            `https://wcg-hrms.onrender.com/api/timesheet/${weekString}?projectId=${projectId}`,
             {
               method: "PUT",
               headers: {
@@ -152,7 +152,7 @@ const TimeOffRequest = () => {
         reason: reason || "",
       };
 
-      const res = await fetch("http://localhost:5000/api/leave/apply", {
+      const res = await fetch("https://wcg-hrms.onrender.com/api/leave/apply", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
