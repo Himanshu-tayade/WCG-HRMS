@@ -18,7 +18,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await fetch("https://hrms-1-2jfq.onrender.com/api/project", {
+        const res = await fetch("https://wcg-hrms.onrender.com/api/project", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -50,7 +50,7 @@ const Dashboard = () => {
         .padStart(2, "0")}`;
 
       const res = await fetch(
-        `https://hrms-1-2jfq.onrender.com/api/timesheet/${weekString}?projectId=${projectId}`,
+        `https://wcg-hrms.onrender.com/api/timesheet/${weekString}?projectId=${projectId}`,
         {
           method: "GET",
           headers: {
@@ -82,7 +82,7 @@ const Dashboard = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `https://hrms-1-2jfq.onrender.com/api/timesheet/${weekString}?projectId=${projectId}`,
+        `https://wcg-hrms.onrender.com/api/timesheet/${weekString}?projectId=${projectId}`,
         {
           method: "GET",
           headers: {
@@ -132,7 +132,7 @@ const Dashboard = () => {
     try {
       setLoading(true);
       const res = await fetch(
-        `https://hrms-1-2jfq.onrender.com/api/timesheet/${weekString}?projectId=${selectedProject._id}`,
+        `https://wcg-hrms.onrender.com/api/timesheet/${weekString}?projectId=${selectedProject._id}`,
         {
           method: "PUT",
           headers: {
