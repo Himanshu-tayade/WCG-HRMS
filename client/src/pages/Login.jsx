@@ -31,7 +31,7 @@ const Login = () => {
           validationSchema={toFormikValidationSchema(loginSchema)}
           onSubmit={async (values, { setSubmitting }) => {
             try {
-              const res = await fetch("https://hrms-1-2jfq.onrender.com/api/auth/login", {
+              const res = await fetch("https://wcg-hrms.onrender.com/api/auth/login", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(values),
@@ -69,11 +69,11 @@ const Login = () => {
                   alert("Unknown role 🚫: " + role);
                 }
               } else {
-                alert(data.message || "Login failed ☹️");
+                alert(data.message || "Login failed ");
               }
             } catch (err) {
               console.error("Login error:", err);
-              alert("Login unsuccessful ☹️");
+              alert("Login unsuccessful ");
             } finally {
               setSubmitting(false);
             }
